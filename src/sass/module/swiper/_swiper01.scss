@@ -1,46 +1,151 @@
 @use "global" as *;
-@-webkit-keyframes zoomUp {
-  0% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-  100% {
-    -webkit-transform: scale(1.15);
-    transform: scale(1.15);
-  }
-}
-
-@keyframes zoomUp {
-  /* 1.15倍させる指定 */
-  0% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-  100% {
-    -webkit-transform: scale(1.15);
-    transform: scale(1.15);
-  }
+.swiper.mySwiper1 {
+  width: 100%;
+  height: 100%;
 }
 
 .swiper-slide {
-  overflow: hidden;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
 }
 
-.swiper-slide-active .slide-img,
-.swiper-slide-duplicate-active .slide-img,
-.swiper-slide-prev .slide-img {
-  /* 12秒かけて拡大させる */
-  -webkit-animation: zoomUp 12s linear 0s;
-  animation: zoomUp 12s linear 0s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.slide-img {
+// 画像比率調整
+// slide1-1
+.swiper-slide.slide1-1 {
+  display: block;
+  width: 100%;
+  position: relative;
+  @include mq(md) {
+  }
+  @include mq(xl) {
+  }
+}
+
+.swiper-slide.slide1-1::before {
+  content: "";
+  display: block;
+  width: 100%;
+  padding-top: 205.335%;
+  background-color: #ff7f50;
+  @include mq(md) {
+  }
+  @include mq(xl) {
+  }
+}
+// slide1-2
+.swiper-slide.slide1-2 {
+  display: block;
+  width: 100%;
+  position: relative;
+  @include mq(md) {
+  }
+  @include mq(xl) {
+  }
+}
+
+.swiper-slide.slide1-2::before {
+  content: "";
+  display: block;
+  width: 100%;
+  padding-top: 205.335%;
+  background-color: #ff69b4;
+  @include mq(md) {
+  }
+  @include mq(xl) {
+  }
+}
+
+// slide1-3
+.swiper-slide.slide1-3 {
+  display: block;
+  width: 100%;
+  position: relative;
+  @include mq(md) {
+  }
+  @include mq(xl) {
+  }
+}
+
+.swiper-slide.slide1-3::before {
+  content: "";
+  display: block;
+  width: 100%;
+  padding-top: 205.335%;
+  background-color: #4169e1;
+  @include mq(md) {
+  }
+  @include mq(xl) {
+  }
+}
+
+// 画像設定
+.slide1-1__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url(/images/MV1@3x.png);
   background-size: cover;
-  background-position: center center; /* 背景画像は中央を軸に表示させる */
-  // height: rem(770); /* 600pxの高さで表示させる */
-  height: rem(770);
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include mq(md) {
+  }
+  @include mq(xl) {
+  }
+}
+.slide1-2__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url(/images/mv2@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include mq(md) {
+  }
+  @include mq(xl) {
+  }
+}
+.slide1-3__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url(/images/MV3@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include mq(md) {
+  }
+  @include mq(xl) {
+  }
 }

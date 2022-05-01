@@ -1,15 +1,20 @@
 jQuery(function ($) {
   // この中であればWordpressでも「$」が使用可能になる
 
-  let mySwiper = new Swiper(".swiper-container", {
-    // Optional parameters
-    loop: true, // ループの指定
-    effect: "fade", //フェードの指定
+  var swiper = new Swiper(".mySwiper1", {
+    spaceBetween: 30,
+    centeredSlides: true,
     autoplay: {
-      delay: 4000, //４秒後に次のスライドへ
-      disableOnInteraction: false, //ユーザー側で操作してもスライドを止めない
+      delay: 2500,
+      disableOnInteraction: false,
     },
-    speed: 2000, //２秒かけてフェードで切り替わる
-    allowTouchMove: false, //マウスでのスワイプを禁止
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
   });
 });
