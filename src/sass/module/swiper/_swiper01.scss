@@ -1,0 +1,40 @@
+@use "global" as *;
+.wrap {
+  // padding: 16px;
+  @include mq(md) {
+  }
+  @include mq(xl) {
+  }
+}
+
+@keyframes zoomUp {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.15);
+  }
+}
+
+.swiper-slide-active .slide-img,
+.swiper-slide-duplicate-active .slide-img,
+.swiper-slide-prev .slide-img {
+  animation: zoomUp 10s linear 0s 1 normal both;
+}
+.slide-img img {
+  display: block;
+}
+
+// 画像設定
+.swiper01-img img {
+  width: 100%;
+  height: rem(770);
+  object-fit: cover;
+  @include mq(md) {
+    max-width: rem(1280);
+    width: 100%;
+    height: rem(851);
+  }
+  @include mq(xl) {
+  }
+}
