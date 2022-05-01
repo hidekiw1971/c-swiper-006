@@ -1,10 +1,11 @@
 # compornent（共通部品）
 
 ## イメージ画像
+
 - chrome
-- 
+-
 - safari
-- 
+-
 
 ## 概要
 
@@ -37,8 +38,7 @@
 
 ## portfolio url:
 
-- https://c-0000.wtb.cfbx.jp/
-- https://css-md-0000.wtb.cfbx.jp/
+- https://c-0063.wtb.cfbx.jp/
 
 ## 参考にしたサイト
 
