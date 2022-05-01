@@ -1,150 +1,39 @@
 @use "global" as *;
-.swiper.mySwiper1 {
-  width: 100%;
-  height: 100%;
-}
-
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-
-  /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-}
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-// 画像比率調整
-// slide1-1
-.swiper-slide.slide1-1 {
-  display: block;
-  width: 100%;
-  position: relative;
+.wrap {
+  // padding: 16px;
   @include mq(md) {
   }
   @include mq(xl) {
   }
 }
 
-.swiper-slide.slide1-1::before {
-  content: "";
-  display: block;
-  width: 100%;
-  padding-top: 205.335%;
-  background-color: #ff7f50;
-  @include mq(md) {
+@keyframes zoomUp {
+  0% {
+    transform: scale(1);
   }
-  @include mq(xl) {
-  }
-}
-// slide1-2
-.swiper-slide.slide1-2 {
-  display: block;
-  width: 100%;
-  position: relative;
-  @include mq(md) {
-  }
-  @include mq(xl) {
+  100% {
+    transform: scale(1.15);
   }
 }
 
-.swiper-slide.slide1-2::before {
-  content: "";
-  display: block;
-  width: 100%;
-  padding-top: 205.335%;
-  background-color: #ff69b4;
-  @include mq(md) {
-  }
-  @include mq(xl) {
-  }
+.swiper-slide-active .slide-img,
+.swiper-slide-duplicate-active .slide-img,
+.swiper-slide-prev .slide-img {
+  animation: zoomUp 10s linear 0s 1 normal both;
 }
-
-// slide1-3
-.swiper-slide.slide1-3 {
+.slide-img img {
   display: block;
-  width: 100%;
-  position: relative;
-  @include mq(md) {
-  }
-  @include mq(xl) {
-  }
-}
-
-.swiper-slide.slide1-3::before {
-  content: "";
-  display: block;
-  width: 100%;
-  padding-top: 205.335%;
-  background-color: #4169e1;
-  @include mq(md) {
-  }
-  @include mq(xl) {
-  }
 }
 
 // 画像設定
-.slide1-1__img {
-  display: block;
+.swiper01-img img {
   width: 100%;
-  height: 100%;
-  background-image: url(/images/MV1@3x.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  position: absolute;
-  top: 0;
-  left: 0;
+  height: rem(770);
+  object-fit: cover;
   @include mq(md) {
-  }
-  @include mq(xl) {
-  }
-}
-.slide1-2__img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-image: url(/images/mv2@3x.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  @include mq(md) {
-  }
-  @include mq(xl) {
-  }
-}
-.slide1-3__img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-image: url(/images/MV3@3x.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  @include mq(md) {
+    max-width: rem(1280);
+    width: 100%;
+    height: rem(851);
   }
   @include mq(xl) {
   }
